@@ -1,0 +1,30 @@
+// Captura dos elementos do HTML
+const btnSustentavel = document.getElementById('btn-sustentavel');
+const btnIntensivo = document.getElementById('btn-intensivo');
+const prodValor = document.getElementById('prod-valor');
+const ambValor = document.getElementById('amb-valor');
+const mensagemStatus = document.getElementById('mensagem-status');
+
+// Função para atualizar a interface com base nas escolhas
+function aplicarPraticaAgricola(tipo) {
+    if (tipo === 'sustentavel') {
+        prodValor.textContent = '85%';
+        ambValor.textContent = '90%';
+        mensagemStatus.textContent = 'Excelente! A rotação de culturas mantém o solo fértil a longo prazo e o reflorestamento protege a biodiversidade local, garantindo um futuro sustentável.';
+        mensagemStatus.style.color = '#2e7d32';
+    } else if (tipo === 'intensivo') {
+        prodValor.textContent = '95%';
+        ambValor.textContent = '20%';
+        mensagemStatus.textContent = 'Alerta! Embora a produção inicial seja alta, o esgotamento do solo e o desmatamento destroem o meio ambiente, comprometendo a sustentabilidade futura.';
+        mensagemStatus.style.color = '#d32f2f';
+    }
+}
+
+// Vinculação dos eventos de clique aos botões
+btnSustentavel.addEventListener('click', function() {
+    aplicarPraticaAgricola('sustentavel');
+});
+
+btnIntensivo.addEventListener('click', function() {
+    aplicarPraticaAgricola('intensivo');
+});
