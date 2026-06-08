@@ -28,3 +28,47 @@ btnSustentavel.addEventListener('click', function() {
 btnIntensivo.addEventListener('click', function() {
     aplicarPraticaAgricola('intensivo');
 });
+// Seleção dos elementos do DOM
+const btnSustentavel = document.getElementById('btn-sustentavel');
+const btnIntensivo = document.getElementById('btn-intensivo');
+
+const prodValor = document.getElementById('prod-valor');
+const ambValor = document.getElementById('amb-valor');
+
+const barProd = document.getElementById('bar-prod');
+const barAmb = document.getElementById('bar-amb');
+
+const mensagemStatus = document.getElementById('mensagem-status');
+const feedbackBox = document.querySelector('.feedback-box');
+
+// Função controladora do simulador
+function rodarSimulacao(modo) {
+    if (modo === 'sustentavel') {
+        // Atualiza os textos numéricos
+        prodValor.textContent = '85%';
+        ambValor.textContent = '95%';
+        
+        // Altera graficamente o tamanho das barras de progresso
+        barProd.style.width = '85%';
+        barAmb.style.width = '95%';
+        
+        // Customização de cor temática das barras
+        barProd.style.backgroundColor = '#4caf50';
+        barAmb.style.backgroundColor = '#4caf50';
+        
+        // Feedback textual interativo
+        mensagemStatus.innerHTML = '<strong>Estratégia Eco-Tech Ativa:</strong> Perfeito! A rotação de culturas quebrou o ciclo de pragas e manteve os nutrientes da terra. O reflorestamento trouxe polinizadores de volta. Produção consistente e ecossistema totalmente protegido!';
+        feedbackBox.style.borderColor = '#4caf50';
+        
+    } else if (modo === 'intensivo') {
+        // Atualiza os textos numéricos
+        prodValor.textContent = '95%';
+        ambValor.textContent = '15%';
+        
+        // Altera graficamente o tamanho das barras de progresso
+        barProd.style.width = '95%';
+        barAmb.style.width = '15%';
+        
+        // Customização de cor temática (Alerta Vermelho/Laranja)
+        barProd.style.backgroundColor = '#
+    
