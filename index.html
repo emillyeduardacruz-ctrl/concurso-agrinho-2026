@@ -44,3 +44,71 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFuturo | The Sustainable Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Agro<span>Futuro</span></div>
+        <p class="tagline">Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</p>
+    </header>
+
+    <main class="main-container">
+        <section class="game-card">
+            <h2><span class="icon">🎮</span> Painel de Comando</h2>
+            <p class="instrucoes">Você está no controle. Escolha a estratégia de manejo para a sua fazenda e gerencie o impacto a longo prazo:</p>
+            
+            <div class="actions-grid">
+                <button id="btn-sustentavel" class="btn-choice positive">
+                    <strong>Estratégia Eco-Tech</strong>
+                    <span>Rotação de culturas + Reflorestamento</span>
+                </button>
+                <button id="btn-intensivo" class="btn-choice negative">
+                    <strong>Estratégia Max-Yield</strong>
+                    <span>Monocultura + Cultivo Intensivo</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="game-card status-card">
+            <h2><span class="icon">📊</span> Status do Ecossistema</h2>
+            
+            <div class="hud-bar">
+                <div class="hud-info">
+                    <span>Nível de Produção (Alimentos/Lucro)</span>
+                    <span id="prod-valor" class="stat-number">50%</span>
+                </div>
+                <div class="bar-container">
+                    <div id="bar-prod" class="bar-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+
+            <div class="hud-bar">
+                <div class="hud-info">
+                    <span>Saúde do Meio Ambiente (Solo/Biodiversidade)</span>
+                    <span id="amb-valor" class="stat-number">50%</span>
+                </div>
+                <div class="bar-container">
+                    <div id="bar-amb" class="bar-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+
+            <div class="feedback-box">
+                <p id="mensagem-status">Aguardando comando... Selecione uma ação acima para simular os resultados.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Desenvolvido para o Concurso Agrinho 2026 | Componente Curricular de Programação</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
